@@ -16,7 +16,7 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package' //it do to change to specific folder to porject file it excure the mvn clean packege  it find the file of pom.xml ,then pom file knonw the  project  then the mvn build the project 
+        sh 'cd spring-boot-app && mvn clean package' //it do to change to specific folder to porject file it excure the mvn clean packege  it find the file of pom.xml ,then pom file knonw the  project  then the mvn build the project 
       }
     }
     stage('Static Code Analysis') {
